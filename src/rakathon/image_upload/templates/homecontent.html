@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+</head>
+<body>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .banner {
+            color: rgb(0, 0, 0);
+            font-family: Arial;
+            text-align: left;
+            padding: 10px 35px;
+        }
+
+        .reason-cards {
+            display: flex;
+            font-family: Arial;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 10px 90px;
+            height: 100%;
+            
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin: 10px;
+            width: 20%;
+            text-align: center;
+            border-radius: 10%;
+            min-height: 150px;
+        }
+
+        .card h2 {
+            font-size: 24px;
+            color: rgb(175, 36, 24);
+        }
+
+        .card p {
+            font-size: 16px;
+            color: rgb(0, 0, 0);
+        }
+
+        /* Add this CSS rule to create the hover effect */
+        .card:hover {
+            border-top: 4px solid rgb(175, 36, 24); /* Add a red border on top when hovered */
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1>Why Visual Search ? </h1>
+    </div>
+    <div class="reason-cards">
+        <div class="card">
+            <h2>Efficiency</h2>
+            <p>Visual search saves time and effort by quickly finding what you're looking for.</p>
+        </div>
+        <div class="card">
+            <h2>Accuracy</h2>
+            <p>Visual search provides precise results, reducing the chance of errors.</p>
+        </div>
+        <div class="card">
+            <h2>Engagement</h2>
+            <p>Enhance user engagement with intuitive and visually appealing search experiences.</p>
+        </div>
+    </div>
+</body>
+</html>

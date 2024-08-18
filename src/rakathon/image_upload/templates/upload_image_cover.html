@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+</head>
+<body>
+
+<div class="dashboard" style="max-width: 100%">
+    <img class="mySlides" src="https://facts.net/wp-content/uploads/2023/06/45-facts-about-tokyo-1688094762.jpeg" style="width: 100%; opacity: 0.5">
+    <div class="banner-text">
+        <div class="container-form">
+            <h1>Upload an Image</h1>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Upload</button>
+            </form>
+
+            {% if form.instance.image_file %}
+                <h4>Uploaded Image:</h4>
+                <img src="{{ form.instance.image_file.url }}" alt="Not found" style="height:300px; width:400px; margin-top: 5px;">
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: rgb(255, 255, 255);
+        padding: 0px;
+        margin: 0;
+    }
+    .container-form{
+        background-color: white;
+        border-radius: 5%;
+        text-align: center;
+        color: black;
+        padding: 20px 80px;
+        max-height: 700px;
+    }
+    .dashboard {
+        position: relative; /* Add position relative to the dashboard container */
+        text-align: center; /* Center align the text */
+        background-color: black;
+    }
+
+    .dashboard img {
+        margin-top: 65px;
+        padding: 0;
+        height: 800px;
+        width: 100vh;
+        object-fit: cover;
+    }
+
+    /* Style for the banner text */
+    .banner-text {
+        font-family: 'Arial';
+        font-size:150%;
+        position: absolute; /* Position the text absolutely within the dashboard */
+        top: 55%; /* Place the text vertically in the middle */
+        left: 45%; /* Place the text horizontally in the middle */
+        transform: translate(-35%, -50%); /* Center the text */
+        color: white; /* Text color */
+        padding: 20px; /* Add padding to the text */
+
+    }
+
+    .banner-text button {
+        display: block;
+        background-color: rgb(175, 36, 24);
+        color: white;
+        text-align: center;
+        border: none;
+        border-radius: 13px;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 2px 2px;
+        width:20%;
+        font-size: 16px;
+        box-shadow: 0 2px 2px 2px rgba(0,0,0.5,0.1);
+    }
+</style>
+
+</body>
+</html>
