@@ -1,4 +1,4 @@
-# Gen-AI-Visual-Search
+# Visual Search in E-commerce
 Translating customers' visual preferences into meaningful product experiences.
 
 ### Elevating E-Commerce: Pioneering Multi-Search AI for Visual Discovery
